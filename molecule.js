@@ -9,10 +9,11 @@ class Atom {
   }
 }
 
-class Molecule {
-  constructor(name = "", atoms = []) {
+export default class Molecule {
+  constructor(name = "") {
     this.name = name;
-    this.atoms = atoms;
+    this.atoms = [];
+    this.bonds = [];
   }
 
   loadFromXYZData(xyzData) {
@@ -37,4 +38,7 @@ class Molecule {
       this.atoms.push(atom);
     }
   }
+
+  findBonds() {}
 }
+//bonds
